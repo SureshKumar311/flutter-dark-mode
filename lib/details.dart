@@ -15,19 +15,21 @@ class DetailsScreen extends StatelessWidget {
           children: [
             Hero(
               tag: 'test',
-              child: Container(
-                height: 300,
-                width: screenSize.width,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  image: DecorationImage(
-                    image: Image.network(
-                      'https://images.freeimages.com/images/large-previews/89a/one-tree-hill-1360813.jpg',
+              child: Material(
+                child: Container(
+                  height: 300,
+                  width: screenSize.width,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    image: DecorationImage(
+                      image: Image.network(
+                        'https://images.freeimages.com/images/small-previews/76e/abstract-1-1174741.jpg',
+                        fit: BoxFit.cover,
+                      ).image,
                       fit: BoxFit.cover,
-                    ).image,
-                    fit: BoxFit.cover,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                   ),
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
               ),
             ),
@@ -60,7 +62,7 @@ class DetailsScreen extends StatelessWidget {
                           leading: ClipRRect(
                             borderRadius: const BorderRadius.all(Radius.circular(10)),
                             child: Image.network(
-                              'https://images.freeimages.com/images/large-previews/89a/one-tree-hill-1360813.jpg',
+                              'https://images.freeimages.com/images/small-previews/76e/abstract-1-1174741.jpg',
                               fit: BoxFit.cover,
                             ),
                           ),

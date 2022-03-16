@@ -171,98 +171,104 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: 350,
-              width: double.infinity,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  itemBuilder: (_, index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: Hero(
-                        tag: 'test',
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.of(context).push(
-                                MaterialPageRoute(builder: (_) => const DetailsScreen()));
-                          },
-                          borderRadius: const BorderRadius.all(Radius.circular(10)),
-                          child: Stack(
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    height: 250,
-                                    width: screenSize.width * 0.7,
-                                    decoration: BoxDecoration(
-                                      color: Colors.amber,
-                                      image: DecorationImage(
-                                        image: Image.network(
-                                          'https://images.freeimages.com/images/large-previews/89a/one-tree-hill-1360813.jpg',
-                                          fit: BoxFit.cover,
-                                        ).image,
-                                        fit: BoxFit.cover,
+            Hero(
+              tag: 'test',
+              child: Material(
+                elevation: 0,
+                color: const Color(0xff1b1d21),
+                child: SizedBox(
+                  height: 350,
+                  width: double.infinity,
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 5,
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      itemBuilder: (_, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (_) => const DetailsScreen()));
+                            },
+                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                            child: Stack(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        height: 250,
+                                        width: screenSize.width * 0.7,
+                                        decoration: BoxDecoration(
+                                          color: Colors.amber,
+                                          image: DecorationImage(
+                                            image: Image.network(
+                                              'https://images.freeimages.com/images/small-previews/76e/abstract-1-1174741.jpg',
+                                              fit: BoxFit.cover,
+                                            ).image,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          borderRadius:
+                                              const BorderRadius.all(Radius.circular(10)),
+                                        ),
                                       ),
-                                      borderRadius:
-                                          const BorderRadius.all(Radius.circular(10)),
                                     ),
-                                  ),
-                                  const SizedBox(height: 20),
-                                  const Text(
-                                    'FRL DEC With - Mon ',
-                                    style: TextStyle(
-                                      color: Colors.deepPurpleAccent,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
+                                    const SizedBox(height: 20),
+                                    const Text(
+                                      'FRL DEC With - Mon ',
+                                      style: TextStyle(
+                                        color: Colors.deepPurpleAccent,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    'Nocturnal and Unusual visit',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 18,
+                                    const SizedBox(height: 10),
+                                    const Text(
+                                      'Nocturnal and Unusual visit',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 18,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  const Text(
-                                    'Louvre',
-                                    style: TextStyle(
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 15,
+                                    const SizedBox(height: 10),
+                                    const Text(
+                                      'Louvre',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 15,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Positioned(
-                                right: 25,
-                                bottom: 80,
-                                child: InkWell(
-                                  onTap: () {},
-                                  child: Container(
-                                    padding: const EdgeInsets.all(10),
-                                    decoration: const BoxDecoration(
-                                        shape: BoxShape.circle, color: Color(0xff1f2326)),
-                                    child: const Icon(
-                                      Icons.heart_broken,
-                                      color: Colors.grey,
-                                      size: 25,
-                                    ),
-                                  ),
+                                  ],
                                 ),
-                              )
-                            ],
+                                Positioned(
+                                  right: 25,
+                                  bottom: 80,
+                                  child: InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: const BoxDecoration(
+                                          shape: BoxShape.circle, color: Color(0xff1f2326)),
+                                      child: const Icon(
+                                        Icons.heart_broken,
+                                        color: Colors.grey,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ),
-                    );
-                  }),
+                        );
+                      }),
+                ),
+              ),
             ),
           ],
         ),
